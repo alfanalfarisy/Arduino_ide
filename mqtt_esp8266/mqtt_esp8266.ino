@@ -6,8 +6,8 @@ const char* ssid = "Instagram: @ksr_pro";
 const char* password =  "kutjingmomjing";
 const char* mqttServer = "broker.mqttdashboard.com";
 const int mqttPort = 1883;
-const char* clientID = "siagabanjirciliwung";
-const char* channelName = "alfan123";
+// const char* clientID = "siagabanjirciliwung";
+// const char* channelName = "alfan123";
 WiFiClient MQTTclient;
 PubSubClient client(MQTTclient);
 
@@ -17,10 +17,6 @@ void callback(char* topic, byte* payload, unsigned int length) {
     payload_buff = payload_buff+String((char)payload[i]);
   }
   Serial.println(payload_buff); // Print out messages.
-  if(payload_buff == "1001"){
-//  Serial.println("success"); // Print out messages. 
-  client.publish("alfan123","11/11/33/43/23/12/12/23/34/"); 
-    }
 }
 
 long lastReconnectAttempt = 0;
@@ -53,7 +49,21 @@ void loop() {
     }
   } else { // Connected.
     client.loop();
-//    client.publish("alfan123","Hello world!"); // Publish message.
-//    delay(1000);
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    client.publish("dpsclwg","221,202005052020,200,1.3,5"); // Publish message.
+
+  
   }
 }
